@@ -22,6 +22,37 @@ Then to run:
 docker run -it --rm --name intake --env SITE_ID="{your clicky site_id" --env SITEKEY="{your clicky sitekey}" --env KAFKA_BROKERS="192.168.1.x:port" site-stats-intake
 ```
 
+## Deploy to Marathon
+
+Create a new application:
+
+```
+{
+  "id": "site-stats-intake",
+  "cmd": null,
+  "cpus": 1,
+  "mem": 128,
+  "disk": 0,
+  "instances": 1,
+  "container": {
+    "docker": {
+      "image": "admintome/site-stats-intake"
+    },
+    "type": "DOCKER"
+  },
+  "networks": [
+    {
+      "mode": "host"
+    }
+  ],
+  "env": {
+    "KAFKA_BROKERS": "192.168.1.x:port",
+    "SITE_ID": "{your site_id}",
+    "SITEKEY": "{your sitekey}"
+  }
+}
+```
+
 For more infomation checkout my article: 
 
 [Kafka Tutorial for Fast Data Architecture](http://www.admintome.com/blog/kafka-tutorial-for-fast-data-architecture/)
