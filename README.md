@@ -53,6 +53,7 @@ Create a new application:
 }
 ```
 
-For more infomation checkout my article: 
+For more infomation checkout my articles:
 
+[Kafka Python Tutorial for Fast Data Architecture](blog/kafka-python-tutorial-for-fast-data-architecture/)
 [Kafka Tutorial for Fast Data Architecture](http://www.admintome.com/blog/kafka-tutorial-for-fast-data-architecture/)
